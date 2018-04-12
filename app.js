@@ -50,11 +50,19 @@ app.post('/',function(req,res) {
         });
       })
       // catch errors
-      .catch((err) => {throw err});
-    }).catch((err) => {throw err});
+      .catch((err) => {
+        errMsg = `Twitter Error: ${JSON.stringify(err[0.message])}`;
+        console.log(err);
+        res.redirect(req.originalUrl);
+      });
+    }).catch((err) => {
+      errMsg = `Coordinates Error: XHR Status of: ${err}`;
+      console.log(err);
+      res.redirect(req.originalUrl);
+    });
   }else{
-    errMsg = 'Not a valid IP Address'
-    res.redirect(req.originalUrl)
+    errMsg = 'Not a valid IP Address';
+    res.redirect(req.originalUrl);
   };
 });
 
