@@ -51,7 +51,7 @@ app.post('/',function(req,res) {
       })
       // catch errors
       .catch((err) => {
-        errMsg = `Twitter Error: ${JSON.stringify(err[0.message])}`;
+        errMsg = `Twitter Error: ${JSON.stringify(err[0].message)}`;
         console.log(err);
         res.redirect(req.originalUrl);
       });
