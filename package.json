@@ -1,0 +1,19 @@
+{
+  "name": "connxustest",
+  "version": "1.0.0",
+  "description": "Test for ConnXus",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Spencer Bouse",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "twitter": "^1.7.1",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

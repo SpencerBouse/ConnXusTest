@@ -1,0 +1,24 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <title>ConnXus Test</title>
+</head>
+<body>
+  <h1>ConnXus Test</h1>
+  <form action='/' method='POST'>
+    <p>Enter IP address</p>
+    <input type='text' placeholder='Enter IP here...' name='ipInput' required>
+    <p>Enter Search Term</p>
+    <input type='text' placeholder='Enter Search Term...' name='searchTerm' required><br>
+    <button type='submit'>Submit</button>
+    <p class='errMsg'><%= errMsg %></p>
+  </form>
+  <div>
+    <% tweets.forEach(function(tweet) { %>
+      <blockquote class="twitter-tweet">
+        <p><%= tweet.text %></p>
+        <img src=<%= tweet.user.profile_image_url %>>
+        <h3>-<%= tweet.user.screen_name %></h3>
+      </blockquote>
+    <% }); %>
+  </div>
+</body>
